@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورة حي بورقيبة – المرحوم حسن التومي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Page -->
+    <div id="loading">
+        <div class="loading-content">
+            <img src="1.png" alt="دورة حي بورقيبة" class="logo-img">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <h1 class="title">دورة حي بورقيبة – المرحوم حسن التومي</h1>
+                <p class="subtitle">رمضان 2026</p>
+                <button class="cta-button" onclick="scrollToSection('matches')">مشاهدة المباريات</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>عن الدورة</h2>
+                <p>دورة كرة قدم سنوية في رمضان 2026، تكريماً للمرحوم حسن التومي، تجمع أفضل الفرق في حي بورقيبة.</p>
+            </div>
+        </section>
+
+        <!-- Teams Section -->
+        <section id="teams" class="section">
+            <div class="container">
+                <h2>الفرق المشاركة</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>فريق 1</h3>
+                        <p>وصف الفريق</p>
+                    </div>
+                    <div class="card">
+                        <h3>فريق 2</h3>
+                        <p>وصف الفريق</p>
+                    </div>
+                    <div class="card">
+                        <h3>فريق 3</h3>
+                        <p>وصف الفريق</p>
+                    </div>
+                    <div class="card">
+                        <h3>فريق 4</h3>
+                        <p>وصف الفريق</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section id="matches" class="section">
+            <div class="container">
+                <h2>البرنامج</h2>
+                <ul class="matches-list">
+                    <li>مباراة 1: فريق A vs فريق B - التاريخ والوقت</li>
+                    <li>مباراة 2: فريق C vs فريق D - التاريخ والوقت</li>
+                    <li>مباراة 3: فريق E vs فريق F - التاريخ والوقت</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>المعرض</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">صورة 1</div>
+                    <div class="gallery-item">صورة 2</div>
+                    <div class="gallery-item">صورة 3</div>
+                    <div class="gallery-item">صورة 4</div>
+                    <div class="gallery-item">صورة 5</div>
+                    <div class="gallery-item">صورة 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>تواصل معنا</h2>
+                <p>للاستفسارات، تواصل عبر الواتساب أو البريد الإلكتروني.</p>
+                <button class="whatsapp-button" onclick="openWhatsApp()">تواصل عبر الواتساب</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky Bottom Navigation -->
+    <nav id="bottom-nav">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">عن الدورة</a>
+        <a href="#teams">الفرق</a>
+        <a href="#matches">البرنامج</a>
+        <a href="#gallery">المعرض</a>
+        <a href="#contact">تواصل</a>
+    </nav>
+
+    <!-- Floating WhatsApp Button -->
+    <div id="whatsapp-float" onclick="openWhatsApp()">
+        <span>💬</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
