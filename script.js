@@ -50,7 +50,7 @@ function scrollToSection(sectionId) {
 
 // WhatsApp Button Function
 function openWhatsApp() {
-    const phoneNumber = '1234567890'; // Replace with actual WhatsApp number
+    const phoneNumber = '+21694910905'; // Replace with actual WhatsApp number
     const message = 'مرحباً، أريد الاستفسار عن دورة حي بورقيبة';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
