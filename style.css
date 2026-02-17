@@ -3,7 +3,7 @@
 :root {
     --primary-green: #0f3b2e;
     --secondary-green: #1f5e47;
-    --gold: #d4af37;
+    --gold: #ffffff;
     --white: #ffffff;
     --dark: #111111;
 }
@@ -18,10 +18,10 @@
 }
 
 body {
-    font-family: 'Cairo', 'Amiri', serif;
+    font-family: 'Ghoul', 'Amiri', 'Cairo', serif;
     line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--primary-green);
     direction: rtl;
     overflow-x: hidden;
 }
@@ -35,7 +35,9 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +95,10 @@ body {
 #main-content {
     opacity: 0;
     transition: opacity 1s ease-in;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #main-content.loaded {
@@ -118,14 +124,15 @@ body {
 
 .title {
     font-size: 2.5rem;
-    color: var(--primary-green);
+    color: var(--white);
     margin-bottom: 10px;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--secondary-green);
+    color: var(--gold);
     margin-bottom: 30px;
 }
 
@@ -147,15 +154,15 @@ body {
 
 h2 {
     font-size: 2rem;
-    color: var(--primary-green);
+    color: var(--white);
     margin-bottom: 20px;
     border-bottom: 2px solid var(--gold);
     padding-bottom: 10px;
 }
 
 p {
-    font-size: 1.1rem;
-    color: var(--dark);
+    font-size: 1.3rem;
+    color: var(--white);
     margin-bottom: 20px;
 }
 
@@ -169,42 +176,31 @@ p {
 }
 
 .card {
-    background: linear-gradient(135deg, var(--white), #f9f9f9);
-    border: 2px solid var(--gold);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    box-shadow: none;
+    transition: transform 0.3s;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(31, 94, 71, 0.1));
-    opacity: 0;
-    transition: opacity 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.card:hover::before {
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 .card h3 {
-    color: var(--primary-green);
-    margin-bottom: 10px;
+    color: var(--white);
+    margin-top: 10px;
     font-weight: 600;
+}
+
+.team-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -212,16 +208,27 @@ p {
 
 .matches-list {
     list-style: none;
-    text-align: right;
+    text-align: center;
 }
 
 .matches-list li {
-    background-color: var(--secondary-green);
-    color: var(--white);
+    background: transparent;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.match-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.match-img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -234,18 +241,24 @@ p {
 }
 
 .gallery-item {
-    background-color: var(--primary-green);
-    color: var(--white);
-    height: 150px;
+    background: transparent;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s;
 }
 
-.gallery-item:hover {
+.gallery-item:hover .gallery-img {
     transform: scale(1.05);
 }
 
