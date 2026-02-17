@@ -201,6 +201,7 @@ p {
     border-radius: 15px;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 
@@ -225,6 +226,7 @@ p {
     display: block;
     margin: 0 auto;
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .match-img:hover {
@@ -256,6 +258,7 @@ p {
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .gallery-item:hover .gallery-img {
@@ -372,7 +375,6 @@ p {
     }
     #bottom-nav {
         display: none;
-        /* Hide on desktop, perhaps use a top nav if needed */
     }
 }
 
@@ -383,4 +385,26 @@ p {
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
